@@ -1,5 +1,5 @@
-# Use the official OpenJDK 17 image from Docker Hub
-FROM openjdk:17
+# Use the official amazoncorretto:17 image from Docker Hub to execute build in AWS Container Registry (ECR)
+FROM amazoncorretto:17
 # Set working directory inside the container
 WORKDIR /app
 # Copy the compiled Java application JAR file into the container
