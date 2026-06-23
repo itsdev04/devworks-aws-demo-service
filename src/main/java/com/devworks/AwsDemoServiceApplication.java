@@ -10,3 +10,6 @@ public class AwsDemoServiceApplication {
     SpringApplication.run(AwsDemoServiceApplication.class, args);
   }
 }
+
+//IAM user
+//username: iam_imkrdev, password: AwsConsole#7871
