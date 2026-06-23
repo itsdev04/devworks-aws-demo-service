@@ -1,15 +1,16 @@
+server:
+  port: 8081
 spring:
   application:
     name: devworks-aws-demo-service
-
-  cloud:
-    aws:
-      region:
-        static: us-east-1
-      credentials:
-        instance-profile: true
-
-# Custom application properties
-aws:
-  bucket-name: imkrdev-springboot-bucket
-  sns-topic-arn: arn:aws:sns:us-east-1:123456789012:imkrdev-file-upload-topic
+#  cloud:
+#    aws:
+#      region:
+#        static: eu-north-1
+#      credentials:
+#        instance-profile: true
+#
+## Custom application properties
+#aws:
+#  bucket-name: imkrdev-springboot-bucket
+#  sns-topic-arn: arn:aws:sns:eu-north-1:123456789012:imkrdev-file-upload-topic
