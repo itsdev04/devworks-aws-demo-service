@@ -4,11 +4,13 @@ import com.devworks.dto.Course;
 import com.devworks.service.CourseService;
 import java.util.List;
 import java.util.Optional;
+
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
+@Slf4j
 @RestController
 @RequestMapping("/courses")
 public class CourseController {
@@ -17,6 +19,7 @@ public class CourseController {
 
   @PostMapping(produces = "application/json", consumes = "application/json")
   public ResponseEntity<Course> addCourse(@RequestBody Course course) {
+    log.info("Request received for creating course ", course);
     courseService.addCourse(course);
     return new ResponseEntity<>(course, HttpStatus.CREATED);
   }
