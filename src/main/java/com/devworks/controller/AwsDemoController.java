@@ -10,19 +10,19 @@ import org.springframework.web.multipart.MultipartFile;
 @RestController
 @RequestMapping("/api/aws")
 public class AwsDemoController {
-    private final StorageService storageService;
+  private final StorageService storageService;
 
-    public AwsDemoController(StorageService storageService) {
-        this.storageService = storageService;
-    }
+  public AwsDemoController(StorageService storageService) {
+    this.storageService = storageService;
+  }
 
-    @PostMapping("/upload")
-    public String uploadFile(@RequestParam("file") MultipartFile file) {
-        try {
-            String fileName = storageService.uploadFileAndNotify(file);
-            return "Success! File " + fileName + " is now in S3, and notification was broadcast.";
-        } catch (Exception e) {
-            return "Failed to process: " + e.getMessage();
-        }
+  @PostMapping("/upload")
+  public String uploadFile(@RequestParam("file") MultipartFile file) {
+    try {
+      String fileName = storageService.uploadFileAndNotify(file);
+      return "Success! File " + fileName + " is now in S3, and notification was broadcast.";
+    } catch (Exception e) {
+      return "Failed to process: " + e.getMessage();
     }
+  }
 }

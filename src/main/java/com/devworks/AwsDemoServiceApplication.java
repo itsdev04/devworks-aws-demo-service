@@ -11,5 +11,10 @@ public class AwsDemoServiceApplication {
   }
 }
 
-//IAM user
-//username: iam_imkrdev, password: AwsConsole#7871
+// IAM user
+// username: iam_imkrdev, password: AwsConsole#7871
+
+// AWS CICD
+// Step1 Elastic Container Registry
+// Step2 Create buildspec.yml
+//
