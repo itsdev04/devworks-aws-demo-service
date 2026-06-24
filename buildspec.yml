@@ -39,3 +39,5 @@ artifacts:
   files:
     - imagedefinitions.json
     - target/devworks-aws-demo-service.jar
+
+#
